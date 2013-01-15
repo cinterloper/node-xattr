@@ -16,7 +16,7 @@ Get all the extended attributes on a file, returns obj
 
 Get just the extended attribute names on a file, returns array obj 
  
-  var attrs = xattr.list("/path/to/file");
+  var attrs = xattr.clist("/path/to/file");
 
 Set an extended attribute on a file.  Note at thie moment you can only set string values.
   
@@ -26,5 +26,5 @@ Remove xattr on a file, returns bool
  
   xattr.remove("/path/to/file", "user.attribute");
 
-
+xattr.list defaults to xattr.glist, however you can change this by calling xattr.ccompat(true)
  
